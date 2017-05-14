@@ -30,3 +30,18 @@ function shapeArea(n) {
     }
     
 }
+
+/*
+Arrange input array from smallest to largest so that each element will be bigger than the previous one exactly by 1
+*/
+function makeArrayConsecutive2(statues) {
+    var count = 0;
+    var sorted = statues.sort();
+    for (var i = 0;i<sorted.length;i++){
+       if (i+1 < sorted.length){
+           count = ((sorted[i+1] - sorted[i]) - 1) + count;
+       }
+    }
+    
+    return count;
+}
