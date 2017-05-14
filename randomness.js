@@ -17,3 +17,16 @@ function adjacentElementsProduct(inputArray) {
     
     return total;
 }
+
+/**
+Given an n-interesting polygon, find the area of the polygon for n.
+**/
+function shapeArea(n) {
+    if (n===1){
+        return 1;
+    }
+    else {
+        return (4 * (n - 1)) + shapeArea(n-1);
+    }
+    
+}
