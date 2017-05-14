@@ -36,9 +36,12 @@ Arrange input array from smallest to largest so that each element will be bigger
 */
 function makeArrayConsecutive2(statues) {
     var count = 0;
-    var sorted = statues.sort();
+    var sorted = statues.sort(function(x, y){
+        return y < x;
+    });
+
     for (var i = 0;i<sorted.length;i++){
-       if (i+1 < sorted.length){
+       if ((sorted[i] < sorted[i+1]) && (i+1 < sorted.length)){
            count = ((sorted[i+1] - sorted[i]) - 1) + count;
        }
     }
