@@ -122,7 +122,7 @@ function commonCharacterCount(s1, s2) {
   var s1_ = s1.split('');
   var s2_ = s2.split('');
   var count = 0;
-  s1_.some(function (v) {
+  s1_.forEach(function (v) {
     var i = s2_.indexOf(v);
     if (i >= 0){
       s2_.splice(i, 1);
