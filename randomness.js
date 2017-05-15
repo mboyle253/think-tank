@@ -160,3 +160,17 @@ function sortByHeight(a) {
 
   return t;
 }
+
+function reverseParentheses(s) {
+  var ar = s.match( /\(([^\(\)]+)\)/g);
+  if (ar){
+    ar.map(function(v){
+      var n = v.split('').reverse().join('');
+      s = s.replace(v, n.replace(/[\(\)]+/g, ''));
+    });
+    return reverseParentheses(s);
+  }
+  else {
+    return s;
+  }
+}
