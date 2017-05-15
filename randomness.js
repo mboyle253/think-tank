@@ -133,3 +133,30 @@ function commonCharacterCount(s1, s2) {
   return count;
 }
 
+function isLucky(n) {
+  function sum_(a, b) {
+    return a+b;
+  }
+
+  var ar = n.toString(10).split("").map(function(t){return parseInt(t)});
+  var length = ar.length/2;
+  var ar1 = ar.splice(0, length);
+  return ar.reduce(sum_) === ar1.reduce(sum_);
+}
+
+function sortByHeight(a) {
+  var t = a.filter(function(x){
+    return x > -1;
+  }).sort(function(c,d){
+    return c-d;
+  });
+
+  for (var i=0; i< a.length; i++){
+    if (a[i]===-1){
+      t.splice(i, 0, -1);
+    }
+
+  }
+
+  return t;
+}
