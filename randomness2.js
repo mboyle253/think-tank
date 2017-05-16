@@ -45,3 +45,14 @@ function arrayChange(inputArray) {
   });
   return moves;
 }
+
+function palindromeRearranging(inputString) {
+  var count = 0;
+  inputString.split('').filter(function(v, i, s){
+    return s.indexOf(v) === i;
+  }).map(function(v){
+    if (((inputString.split(v).length-1) % 2) === 1) count++;
+  });
+
+  return count < 2;
+}
