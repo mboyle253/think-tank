@@ -9,3 +9,28 @@ function isBeautifulString(inputString) {
   }
   return true;
 }
+
+function findEmailDomain(address) {
+  //if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(address))
+  return address.substring(address.lastIndexOf('@')+1);
+}
+
+function buildPalindrome(st) {
+  var d = st.split('').findIndex((v, x, self)=>{
+    return self.slice(x, self.length).reverse().join('') === self.slice(x, self.length).join('');
+  });
+
+  return d===0 ? st : st + st.substring(0, d).split('').reverse().join('');
+}
+
+function electionsWinners(votes, k) {
+  return votes.sort((a, b)=>{
+      return b-a;
+    }).filter((v, idx, self)=>{
+      return v+k > self[0] || (idx === 0 && v+k > self[idx+1])
+  }).length;
+}
+
+function isMAC48Address(inputString) {
+    return /^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$/.test(inputString);
+}
