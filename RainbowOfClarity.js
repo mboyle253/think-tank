@@ -32,3 +32,10 @@ function chessKnight(cell) {
 
   return  Math.floor((countY * countX)/2);
 }
+
+function deleteDigit(n) {
+  return n.toString().split('').reduce((total, t, idx, self)=>{
+    var x = parseInt(self.slice(0, idx).concat(self.slice(idx+1, self.length)).join(''));
+    return x > total ? x : total;
+  }, 0);
+}
