@@ -1,3 +1,2 @@
 # think-tank
-Ideas and resources
-Place to store ideas and resources
+Solutions to online coding challenges and puzzles I have participated in.
