@@ -1,121 +1,113 @@
 .hidden {
-  display : none;
-}
+  display: none; }
+
 .table {
-  display : table;
-}
-.game{
-  font-family : sans-serif;
-  width : 350px;
-   background-color : rgba(20, 189, 172,1);
-}
+  display: table; }
+
+.game {
+  font-family: sans-serif;
+  width: 350px;
+  background-color: #14bdac; }
+
 .game--overlay {
-  font-size : 40px;
-  font-weight : 600;
-  color : rgba(102, 102, 102, 1);
-  text-align : center;
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:200px;
-  height:240px;
-  margin : -120px 0 0 -100px;
-  .game--cross{
-    height : 200px;
-    width : 200px;
-    display : block;
-    fill: #666666 !important;    
-  } 
-  
-  .game--circle {
-    height : 200px;
-    width : 200px;
-    circle{
-      stroke: #f5f6f7;
-    }
-  }
-}
+  font-size: 40px;
+  font-weight: 600;
+  color: #666666;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 240px;
+  margin: -120px 0 0 -100px; }
+  .game--overlay .game--cross {
+    height: 200px;
+    width: 200px;
+    display: block;
+    fill: #666666 !important; }
+  .game--overlay .game--circle {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    display: block; }
+    .game--overlay .game--circle circle {
+      stroke: #f5f6f7; }
 
-.game--field{
-  position : relative;
-  height : 350px;
-  background-color : rgba(20, 189, 172,1);
-}
-.game--grid{
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:250px;
-  height:250px;
-  margin : -125px 0 0 -125px;
-}
-.game--row{
-  width : 100%;
-  height : 80px;
-  display:table-row;
-}
+.game--field {
+  position: relative;
+  height: 350px;
+  background-color: #14bdac; }
 
-.game--overlay.cross .game--circle{
-  display : none;
-}
-.game--overlay.circle .game--cross{
-  display : none;
-}
+.game--grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin: -125px 0 0 -125px; }
+
+.game--row {
+  width: 100%;
+  height: 80px;
+  display: table-row; }
+
+.game--overlay.cross .game--circle {
+  display: none; }
+
+.game--overlay.circle .game--cross {
+  display: none; }
+
+.game--overlay.circle .game--circle {
+  display: block; }
+
 .game--cell {
-  width : 80px;
-  height : 80px;
-  border : 3px solid gray;
-  display : table-cell;
-  vertical-align : middle;
-  text-align : center;
-  .game--circle{
-    display : none;
-  }
-  .game--cross{
-    display : none;
-  }
-}
-svg {
-  height : 60px;
-  width : 60px;
-  margin : 0 auto;
-}
-.game--cell.circle {
-  .game--circle{
-    display : block; 
-    circle{
-      stroke: #f5f6f7;
-    }
-  }   
-}
-.game--cell.cross {
-  .game--cross{
-    display : block;
-    fill: #666666 !important;    
-  }   
-}
+  width: 80px;
+  height: 80px;
+  border: 3px solid gray;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+  .game--cell .game--circle {
+    display: none; }
+  .game--cell .game--cross {
+    display: none; }
 
-.game--cell:last-of-type{
-  border-right : none;
-}
-.game--cell:first-of-type{
-  border-left : none;
-}
-.game--row:first-of-type .game--cell{
-  border-top : none;
-}
-.game--row:last-of-type .game--cell{
-  border-bottom : none;
-}
-.game--restart{
-  background-color : rgba(245, 246, 247, 1);
-  height : 50px;
-  text-align:center;
-  line-height : 50px;
+svg {
+  height: 60px;
+  width: 60px;
+  margin: 0 auto; }
+
+.game--cell.circle .game--circle {
+  display: block;
+  top: 3px; }
+  .game--cell.circle .game--circle circle {
+    stroke: #f5f6f7; }
+
+.game--cell.cross .game--cross {
+  top: 3px;
+  display: block;
+  fill: #666666 !important; }
+
+.game--cell:last-of-type {
+  border-right-color: #14bdac; }
+
+.game--cell:first-of-type {
+  border-left-color: #14bdac; }
+
+.game--row:first-of-type .game--cell {
+  border-top-color: #14bdac; }
+
+.game--row:last-of-type .game--cell {
+  border-bottom-color: #14bdac; }
+
+.game--restart {
+  background-color: #f5f6f7;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
   text-transform: uppercase;
-  margin-top : 2px;
-  font-weight : 700;
-}
-.game--restart:hover{
-  cursor:pointer;
-}
+  margin-top: 2px;
+  font-weight: 700; }
+
+.game--restart:hover {
+  cursor: pointer; }
